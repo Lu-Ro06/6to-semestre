@@ -1,0 +1,40 @@
+
+import javax.swing.JOptionPane;
+ 
+public class Examen {
+    public static void main(String[]args){
+        for(int i = 1; i <= 100; i++){
+        float acum = 0;
+        float m;
+        byte sig;
+        float desc= 0,total= 0;
+        m=Float.parseFloat(JOptionPane.showInputDialog("Captura el monto de la compra"));
+        String opcion;
+        opcion=JOptionPane.showInputDialog("Saque una bolita e indique \n1.Rojo \n2.Amarillo \n3.Blanco");
+        switch (opcion){
+            case "Rojo": desc=(float) (0.40*m);
+            total=m-desc;
+            break;
+            
+            case "Amarillo": desc=(float) (0.25*m);
+            total=m-desc;
+            break;
+            
+            case "Blanco":desc=0*m;
+            total=m;
+            break;
+            
+        } System.out.println("El decuento es:" + desc + " Y el total es de: " + total);
+        sig=Byte.parseByte(JOptionPane.showInputDialog("Quieres hacer otra compra?\nEn caso de que sea si responda 1\nEn caso de que no responda 2"));
+        if(sig==1){
+            acum=total+total;
+            System.out.println("Tu total es:" + acum);
+        }if(sig==2){
+            break;
+        }else{
+        }
+        
+    }
+        
+}
+    }
